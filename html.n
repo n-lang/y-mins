@@ -9,30 +9,33 @@
         svg: d:svg
 
     @a!d:type "html" # equivalent to `@a [d:type "html"]`
-    @d:ns!@hash (
+    d:ns!@hash (
         (html:) # we don't set a key, so `d:` will figure out the right `xmlns` prefix name on it's own. It will be the empty ns `d:` always uses the empty ns for the root element on default.
         (svg:) # here `d:` will choose the `"svg"` as `xmlns` because that's the commonly used ns.
     )
-    @a :html # implies that `<#html>` is a tree.
 
-    :version "XHTML+RDFa 1.1"
+    @a :html
+    @expl {@_ # implies that `<#html>` is an instance of `:html`, which implies that `<#html>` is a tree.
+        :version "XHTML+RDFa 1.1"
+    }
 
     @kidz ( # uses the built-in tree predicates.
         [
             @a :head
             @kidz (
-                @val :title "Test"
+                [@val :title "Test"]
                 [
-                    @a :meta
-                    :charset "utf-8"
-                    d:closing - # not nescessary, `d:` knows the html closing rules.
+                    @expl {@_
+                        :charset "utf-8"
+                        d:closing - # not nescessary, `d:` knows the html closing rules.
+                    }
                 ]
             )
         ]
         [
             @a :body
             @kidz (
-                @val :h1 "Test"
+                [@val :h1 "Test"]
             )
         ]
     )
