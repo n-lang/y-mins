@@ -15,7 +15,7 @@
     )
 
     @a :html
-    @expl {@_ # implies that `<#html>` is an instance of `:html`, which implies that `<#html>` is a tree.
+    @expl {@_ 
         :version "XHTML+RDFa 1.1"
     }
 
