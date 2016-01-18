@@ -7,6 +7,7 @@
 
 # This is an N statement:
 <http://example.org/#subject> <http://example.org/#predicate> <http://example.org#object>
+# A statement at least consists of a subject, a predicate and an object.
 
 # It's equivalent to using namespace identifiers:
 ns1:subject ns1:predicate ns1:object
@@ -25,3 +26,13 @@ ns1:s ns1:p
 ns1:s ns1:p ns1:o; ns1:p2 ns1:o2.
 ns1:s ns1:p ns1:o, ns1:o2.
 # It's completely equivalent to the two statements above this section.
+
+# You can use `[]` to create anonymous expressions.
+ns1:child ns1:hasMother [
+    ns1:hasMother ns1:grandma
+]
+
+# When a statement consists of more than two expressions:
+ns1:s ns1:func ns1:arg ns1:o
+# ... it will be curried to the following:
+ns1:s [ns1:func ns1:arg] ns1:o
