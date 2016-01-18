@@ -1,0 +1,27 @@
+#!$N
+
+# Here you can declare, which namespaces you want to use:
+@prefix
+    ns1: <http://example.org/#> # URIs are always enclosed by `<>`
+    ns2: <http://example.com/#>
+
+# This is an N statement:
+<http://example.org/#subject> <http://example.org/#predicate> <http://example.org#object>
+
+# It's equivalent to using namespace identifiers:
+ns1:subject ns1:predicate ns1:object
+
+# When you want to use more than one predicate on the same subject, you can write:
+ns1:subject
+    ns1:predicate ns1:object
+    ns1:predicate2 ns1:object2 # The right indention is important.
+
+# Analogously, you can write the following to reuse subject and predicate for multiple objects.
+ns1:s ns1:p
+    ns1:o
+    ns1:o2
+
+# In order to be able to write statements in just one line, write:
+ns1:s ns1:p ns1:o; ns1:p2 ns1:o2.
+ns1:s ns1:p ns1:o, ns1:o2.
+# It's completely equivalent to the two statements above this section.
