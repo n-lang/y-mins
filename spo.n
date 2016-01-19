@@ -50,5 +50,10 @@ ns1:p`ns1:s ns1:o
 ns1:o`ns1:s`ns1:p
 ns1:s ns1:o`ns1:p
 
-# You can also tie predicate and object together (on statement level) by using `=[p o]`:
+# TODO: Move the following to own section:
+# You can also tie predicate and object together by using `=[p o]`:
 ns1:s =[ns1:p ns1:o]
+
+# TODO: Check provability
+_:po =[ns1:p ns1:o]
+ns1:s @stm!<=^@stm _:po
