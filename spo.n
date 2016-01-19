@@ -42,5 +42,15 @@ ns1:s ns1:func ns1:arg ns:arg2 ns:o
 ns1:s [[ns1:func ns1:arg] ns:arg2] ns:o
 
 # You use `[]` for grouping too:
-ns1:s ns1:p [[ns1:func2] ns1:arg]
+ns1:s ns1:p [ns1:func2 ns1:arg]
 # ns1:func2 takes 1 parameter and returns the object, so it's not the same as the statement above this section.
+
+# There's also a infix respectively postfix notation:
+ns1:p`ns1:s ns1:o
+ns1:o`ns1:s`ns1:p
+ns1:s ns1:o`ns1:p
+
+# You can also tie predicate and object together (on statement level) by using `[[]]`:
+ns1:s [[ns1:p ns1:o]]
+[[ns1:s ns1:p]] ns1:o
+# TODO: Think about that notation.
