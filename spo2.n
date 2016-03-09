@@ -1,0 +1,8 @@
+#!$N
+
+this
+  p o
+  p2 o2
+  p3 o3; p4 o4
+  p5
+    o51; o52

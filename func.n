@@ -1,0 +1,4 @@
+#!$N
+
+this
+  = func1.arg11.arg12

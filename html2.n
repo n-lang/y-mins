@@ -1,0 +1,36 @@
+#!$N
+
+# single line comment
+#[
+  multi line comment
+  start and end must be at the beginning of the line
+  start and end must have the same indention level
+#]
+
+[*
+  :html 'http://example.org/html#'
+  :dom 'http://example.org/dom#'
+]
+
+this
+  dom:type "html"
+  html:html
+
+  [*
+    html:version "XHTML+RDFa 1.1"
+  ]
+
+  kidz [ls
+    dom:smpl.html:title "Test"
+    ()
+      html:meta
+
+      * html:charset "utf-8"
+    ()
+      html:meta
+
+      [*
+        html:name "description"
+        html:content "Lorem ipsum"
+      ]
+  ]
