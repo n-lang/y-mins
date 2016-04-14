@@ -1,5 +1,5 @@
 #!$n
-#'n:ph0'
+#'n:p0'
 
 # single line comment
 #[
