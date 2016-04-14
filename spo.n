@@ -1,59 +1,10 @@
-#!$N
+#!$n
+#'n:ph0'
+/ 'n:ns0'
 
-# Here you can declare, which namespaces you want to use:
-@prefix
-    ns1: <http://example.org/#> # URIs are always enclosed by `<>`
-    ns2: <http://example.com/#>
-
-# This is an N statement:
-<http://example.org/#subject> <http://example.org/#predicate> <http://example.org#object>
-# A statement at least consists of a subject, a predicate and an object.
-
-# It's equivalent to using namespace identifiers:
-ns1:subject ns1:predicate ns1:object
-
-# When you want to use more than one predicate on the same subject, you can write:
-ns1:subject
-    ns1:predicate ns1:object
-    ns1:predicate2 ns1:object2 # The right indention is important.
-
-# Analogously, you can write the following to reuse subject and predicate for multiple objects.
-ns1:s ns1:p
-    ns1:o
-    ns1:o2
-
-# In order to be able to write statements in just one line, write:
-ns1:s ns1:p ns1:o; ns1:p2 ns1:o2.
-ns1:s ns1:p ns1:o, ns1:o2.
-# It's completely equivalent to the two statements above this section.
-
-# You can use `[]` to create anonymous expressions.
-ns1:child ns1:hasMother [
-    ns1:hasMother ns1:grandma
-]
-
-# When a statement consists of more than two expressions:
-ns1:s ns1:func ns1:arg ns1:o
-# ... it will be curried to the following:
-ns1:s [ns1:func ns1:arg] ns1:o
-# It also works with more than four elements per statement:
-ns1:s ns1:func ns1:arg ns:arg2 ns:o
-# means
-ns1:s [[ns1:func ns1:arg] ns:arg2] ns:o
-
-# You use `[]` for grouping too:
-ns1:s ns1:p [ns1:func2 ns1:arg]
-# ns1:func2 takes 1 parameter and returns the object, so it's not the same as the statement above this section.
-
-# There's also a infix respectively postfix notation:
-ns1:p`ns1:s ns1:o
-ns1:o`ns1:s`ns1:p
-ns1:s ns1:o`ns1:p
-
-# TODO: Move the following to own section:
-# You can also tie predicate and object together by using `=[p o]`:
-ns1:s =[ns1:p ns1:o]
-
-# TODO: Check provability
-_:po =[ns1:p ns1:o]
-ns1:s @stm!<=^@stm _:po
+this
+  p o
+  p2 o2
+  p3 o3; p4 o4
+  p5
+    o51; o52

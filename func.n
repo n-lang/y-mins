@@ -1,4 +1,11 @@
-#!$N
+#!$n
+#'n:ph0'
+/ 'n:ns0'
 
 this
-  = func1.arg11.arg12
+  func1.arg1a.arg1b
+  func2.arg2a
+    .arg2a1
+    .arg2a2
+
+  (func3 arg3a) arg3b
