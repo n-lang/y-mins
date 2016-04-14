@@ -1,22 +1,29 @@
-import {fst, snd, rs} from 'njs'
+import rs from 'njs'
 
 const
   html = rs`http://example.org/html#`,
-  dom = rs`http://example.org/dom#`
-  n = rs`n:`,
-  L
+  dom = rs`http://example.org/dom#`,
+  n = rs`n:`
 
 export default n.root(
-  dom.type("html"),
-  html.html,
-  snd(n.kidz, n.ls)
-    (dom.smpl(html.title)("Test"))
-    (n.nil(
-      html.meta,
-      n.def
-        (html.name("description"))
-        (html.content("Lorem ipsum"))
-      ,
-    L))
+  dom.type('html'),
+  n['/'](html.html),
+  n.kidz(n.ls
+    (n['='](
+      n['/'](html.head),
+      n.kidz([ # js native alternative to `n.ls`
+
+        dom.smpl(html.title)('Test'),
+        n['='](
+          n['/'](html.meta),
+          n['*']
+            (html.name('description'))
+            (html.content('Lorem ipsum'))
+        ),
+      ]),
+    )),
+    (dom.smpl(html.body)(
+      dom.smpl(html.h1)('Lorem ipsum – Ein Test')
+    )),
   ),
-L)
+)
