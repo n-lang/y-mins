@@ -31,11 +31,23 @@ Initialize `:html` and `:dom` literal globally:
 ]
 ```
 
+Block with informations about the subject identified by this document:
 ```n
 this
-  dom:type "html"
+```
+
+Setting `n/1` predicate `dom:type` to literal:
+```n
+  dom:type :"html"
+```
+
+Typing to `n/1` type `html:html` which maps the `<html>` tag:
+```n
   / html:html
 
+```
+
+```n
   [@
     html:version :"XHTML+RDFa 1.1"
   ]
