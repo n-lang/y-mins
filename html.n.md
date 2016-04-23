@@ -3,7 +3,7 @@ N's shebang:
 #!$n
 ```
 
-Using the parser version 0 of the `n:` namespace to parse the document:
+Using the parser version 0 of the `n:` schema to parse the document:
 ```n
 #!"n:p0"
 ```
@@ -18,18 +18,20 @@ Comments:
 #]
 ```
 
-Use vocabulary version 0 of the `n:` namespace to match unis:
+Use vocabulary version 0 of the `n:` schema to match unis:
 ```n
 / "n:v0"
 ```
 
-HTML document:
+Initialize `:html` and `:dom` literal globally:
 ```n
 [@
   :html "http://example.org/html#"
   :dom "http://example.org/dom#"
 ]
+```
 
+```n
 this
   dom:type "html"
   / html:html
