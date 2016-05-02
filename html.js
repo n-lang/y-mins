@@ -1,4 +1,4 @@
-import rs from 'njs'
+import rs from 'n.js'
 
 const
   html = rs`http://example.org/html#`,
