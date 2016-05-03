@@ -8,15 +8,9 @@ nested multiline comment
 #}
 #}
 
-_children <ns <                         #-{<} opens a new context, it's like {[}
-                                        #-without the need of a closing {]}
-  $Child1 <child Father*                #-{$} references the current "local"
-                                        #-variable space, {*} creates a new
-                                        #-class instance
+_children <ns <
+  $Child1 <child Father*
 
-  World1 <world*                        #-{World1} isn't an arg of {$} so it
-                                        #-will be "exported" to root
-    <$Child1                            #-objects like {Child} or {World} start
-                                        #-with a capital letter, functions start
-                                        #-with a lowercase letter
+  World1 <world*
+    <$Child1
     <child Mother*
