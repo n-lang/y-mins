@@ -1,13 +1,28 @@
 #!$n
 #!4
-
-{n:xml}
-
+{n:rdf}
 xsd <xmlns {http://www.w3.org/2001/XMLSchema#}
 rdf <xmlns {http://www.w3.org/1999/02/22-rdf-syntax-ns#}
 rdfs <xmlns {http://www.w3.org/2000/01/rdf-schema#}
-owl <xmlns {https://www.w3.org/ns/owl2-xml/#}
+owl <xmlns {http://www.w3.org/2002/07/owl#}
 wine <xmlns {http://www.example.org/wine#}
 
 self
   <owl Ontology*
+  <rdfs comment <str {A wine ontology}
+  <rdfs label <str {Wine Ontology}
+
+Winery <owl Class*
+Region <owl Class*
+Consumable <owl Class*
+PotableLiquid
+  <owl Class*
+  <rdfs subClassOf Consumable
+Wine
+  <rdfs subClassOf PotableLiquid
+  <rdfs label
+    #-TODO world creation
+    <xml lang en
+    wine
+    <xml lang fr
+    vin
