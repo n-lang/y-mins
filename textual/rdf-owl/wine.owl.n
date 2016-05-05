@@ -31,12 +31,12 @@ pack TBox <def>
   wineDescr <owl Class*
   wineColor <$sub wineDescriptor
   vintage <$sub
-    owl:Restriction
-      - <@*
-        owl>
-          onProperty vintageOf
-          minCardinality
-            xsd nonNegativeInteger <:1
+    - <@*
+      owl>
+        Restriction
+        onProperty vintageOf
+        minCardinality
+          xsd nonNegativeInteger <:1
 
 pack RBox <def>
   [$prop] <owl ObjectProperty
