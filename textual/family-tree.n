@@ -8,8 +8,8 @@ nested multiline comment
 #}
 #}
 
-pack children <
-  $Child1 <child Father*
+pack Children <def
+  [$Child1] <child Father*
 
   def World1 <world*
     <$Child1
