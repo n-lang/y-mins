@@ -8,10 +8,10 @@ def
   owl <xmlns {http://www.w3.org/2002/07/owl#}
   wine <xmlns {http://www.example.org/wine#}
 
-def Main
-  <owl Ontology*
-  <rdfs comment <:{A wine ontology}
-  <rdfs label <:{Wine Ontology}
+def Main <
+  owl Ontology*
+  rdfs comment <:{A wine ontology}
+  rdfs label <:{Wine Ontology}
 
 pack TBox <def
   [$sub] <rdfs subClassOf
@@ -30,8 +30,8 @@ pack TBox <def
         xml lang <:fr
         :vin
   wineDescr <owl Class*
-  wineColor <owl subClassOf wineDescriptor
-  vintage <rdfs:subClassOf <owl:Restriction <
+  wineColor <$sub wineDescriptor
+  vintage <$sub <owl:Restriction <
     - <@* <
       owl onProperty vintageOf
       owl minCardinality <xsd nonNegativeInteger <:1
@@ -70,4 +70,4 @@ pack RBox <def
 pack ABox <def
   CentralCoastRegion <region*
   Lindemans65 <madeFromGrape ChardonnayGrape
-  Year1998 yearValue :1998
+  Year1998 <yearValue :1998
