@@ -38,21 +38,32 @@ pack tbox <def
 pack rbox <def
   madeFromGrape <
     owl ObjectProperty*
-    rdfs domain wine
-    rdfs range wineGrape
+    rdfs
+      domain wine
+      range wineGrape
   hasDescr <
     owl ObjectProperty*
-    rdfs domain wine
-    rdfs range wineDescr
+    rdfs
+      domain wine
+      range wineDescr
   hasColor <
     owl subPropertyOf hasDescr
     rdfs range wineColor
   locatedIn <
-    rdfs domain <owl Thing
-    rdfs range Region
+    owl ObjectProperty*
+    rdfs
+      domain <owl Thing
+      range Region
   yearValue <
-    rdfs domain vintageYear
-    rdfs range <xsd positiveInteger
+    owl ObjectProperty*
+    rdfs
+      domain vintageYear
+      range <xsd positiveInteger
+  adjacentRegion <
+    owl SymmetricProperty*
+    rdfs
+      domain region
+      range region
 
 pack abox <def
   CentralCoastRegion <region*
