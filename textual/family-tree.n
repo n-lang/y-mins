@@ -8,9 +8,9 @@ nested multiline comment
 #}
 #}
 
-_children <ns <
+space children <
   $Child1 <child Father*
 
-  World1 <world*
+  def World1 <world*
     <$Child1
     <child Mother*

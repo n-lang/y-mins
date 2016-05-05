@@ -7,22 +7,46 @@ rdfs <xmlns {http://www.w3.org/2000/01/rdf-schema#}
 owl <xmlns {http://www.w3.org/2002/07/owl#}
 wine <xmlns {http://www.example.org/wine#}
 
-self
+def Main
   <owl Ontology*
-  <rdfs comment <str {A wine ontology}
-  <rdfs label <str {Wine Ontology}
+  <rdfs comment <:{A wine ontology}
+  <rdfs label <:{Wine Ontology}
 
-Winery <owl Class*
-Region <owl Class*
-Consumable <owl Class*
-PotableLiquid
-  <owl Class*
-  <rdfs subClassOf Consumable
-Wine
-  <rdfs subClassOf PotableLiquid
-  <rdfs label
-    #-TODO world creation
-    <xml lang en
-    wine
-    <xml lang fr
-    vin
+space tbox <def
+  winery <owl Class*
+  region <owl Class*
+  consumable <owl Class*
+  potableLiquid <
+    owl Class*
+    rdfs subClassOf Consumable
+  wine <
+    rdfs subClassOf PotableLiquid
+    rdfs label <
+      - <@*
+        <xml lang <:en
+        <:wine
+      - <@*
+        <xml lang <:fr
+        <:vin
+  wineDescr <owl Class*
+  wineColor <owl subClassOf wineDescriptor
+
+space rbox <def
+  madeFromGrape <
+    owl ObjectProperty*
+    rdfs domain wine
+    rdfs range wineGrape
+  hasDescr <
+    owl ObjectProperty*
+    rdfs domain wine
+    rdfs range wineDescr
+  hasColor <
+    owl subPropertyOf hasDescr
+    rdfs range wineColor
+  locatedIn
+    rdfs domain <owl Thing
+    rdfs range Region
+
+space abox <def
+  CentralCoastRegion <region*
+  Lindemans65 <madeFromGrape ChardonnayGrape
