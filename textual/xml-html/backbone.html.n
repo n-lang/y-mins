@@ -2,19 +2,19 @@
 $!4
 {n:xml}
 def
-  html <xmlns https://www.w3.org/1999/xhtml/#
+  html <xmlns{https://www.w3.org/1999/xhtml/#}
 
-def Main <
+def Main
   html html*
-  xml childz (-- <
-    - <@* <
+  xml childz (--
+    - <@*
       html head*
-      xml childz (-- <
-        (xml simple <
+      xml childz (--
+        (xml simple
           html title*
           :{Lorem ipsum}
         )
-        - <@* <
+        - <@*
           html meta*
           ...
       )

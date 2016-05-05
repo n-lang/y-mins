@@ -1,73 +1,76 @@
 #!$n
 #!4
 {n:rdf}
-def
-  xsd <xmlns {http://www.w3.org/2001/XMLSchema#}
-  rdf <xmlns {http://www.w3.org/1999/02/22-rdf-syntax-ns#}
-  rdfs <xmlns {http://www.w3.org/2000/01/rdf-schema#}
-  owl <xmlns {http://www.w3.org/2002/07/owl#}
-  wine <xmlns {http://www.example.org/wine#}
+def>
+  xsd <xmlns{http://www.w3.org/2001/XMLSchema#}
+  rdf <xmlns{http://www.w3.org/1999/02/22-rdf-syntax-ns#}
+  rdfs <xmlns{http://www.w3.org/2000/01/rdf-schema#}
+  owl <xmlns{http://www.w3.org/2002/07/owl#}
+  wine <xmlns{http://www.example.org/wine#}
 
-def Main <
+def Main
   owl Ontology*
   rdfs comment <:{A wine ontology}
   rdfs label <:{Wine Ontology}
 
-pack TBox <def
+pack TBox <def>
   [$sub] <rdfs subClassOf
   winery <owl Class*
   region <owl Class*
   consumable <owl Class*
-  potableLiquid <
+  potableLiquid
     $sub Consumable
-  wine <
+  wine
     $sub PotableLiquid
-    rdfs label <
-      - <@* <
+    rdfs label
+      - <@*
         xml lang <:en
         :wine
-      - <@* <
+      - <@*
         xml lang <:fr
         :vin
   wineDescr <owl Class*
   wineColor <$sub wineDescriptor
-  vintage <$sub <owl:Restriction <
-    - <@* <
-      owl onProperty vintageOf
-      owl minCardinality <xsd nonNegativeInteger <:1
+  vintage <$sub
+    owl:Restriction
+      - <@*
+        owl>
+          onProperty vintageOf
+          minCardinality
+            xsd nonNegativeInteger <:1
 
-pack RBox <def
+pack RBox <def>
   [$prop] <owl ObjectProperty
-  madeFromGrape <
+  madeFromGrape
     $prop*
-    rdfs
+    rdfs>
       domain wine
       range wineGrape
-  hasDescr <
+  hasDescr
     $prop*
-    rdfs
+    rdfs>
       domain wine
       range wineDescr
-  hasColor <
+  hasColor
     owl subPropertyOf hasDescr
     rdfs range wineColor
-  locatedIn <
+  locatedIn
     $prop*
-    rdfs
+    rdfs>
       domain <owl Thing
       range Region
-  yearValue <
+  yearValue
     $prop*
-    rdfs
+    rdfs>
       domain vintageYear
       range <xsd positiveInteger
-  adjacentRegion <
+  adjacentRegion
     owl SymmetricProperty*
-    rdfs
+    rdfs>
       domain region
       range region
 
-pack ABox <def
+pack ABox <def>
   CentralCoastRegion <region*
   Lindemans65 <madeFromGrape ChardonnayGrape
   Year1998 <yearValue :1998
