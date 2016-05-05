@@ -12,7 +12,7 @@ def Main
   <rdfs comment <:{A wine ontology}
   <rdfs label <:{Wine Ontology}
 
-space tbox <def
+pack tbox <def
   winery <owl Class*
   region <owl Class*
   consumable <owl Class*
@@ -22,16 +22,20 @@ space tbox <def
   wine <
     rdfs subClassOf PotableLiquid
     rdfs label <
-      - <@*
-        <xml lang <:en
-        <:wine
-      - <@*
-        <xml lang <:fr
-        <:vin
+      - <@* <
+        xml lang <:en
+        :wine
+      - <@* <
+        xml lang <:fr
+        :vin
   wineDescr <owl Class*
   wineColor <owl subClassOf wineDescriptor
+  vintage <rdfs:subClassOf <owl:Restriction <
+    - <@* <
+      owl onProperty vintageOf
+      owl minCardinality <xsd nonNegativeInteger <:1
 
-space rbox <def
+pack rbox <def
   madeFromGrape <
     owl ObjectProperty*
     rdfs domain wine
@@ -43,10 +47,14 @@ space rbox <def
   hasColor <
     owl subPropertyOf hasDescr
     rdfs range wineColor
-  locatedIn
+  locatedIn <
     rdfs domain <owl Thing
     rdfs range Region
+  yearValue <
+    rdfs domain vintageYear
+    rdfs range <xsd positiveInteger
 
-space abox <def
+pack abox <def
   CentralCoastRegion <region*
   Lindemans65 <madeFromGrape ChardonnayGrape
+  Year1998 yearValue :1998

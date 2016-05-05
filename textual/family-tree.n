@@ -8,7 +8,7 @@ nested multiline comment
 #}
 #}
 
-space children <
+pack children <
   $Child1 <child Father*
 
   def World1 <world*
