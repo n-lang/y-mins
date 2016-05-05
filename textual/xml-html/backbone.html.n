@@ -1,21 +1,54 @@
 #!$n
 $!4
 {n:xml}
-def
+def>
   html <xmlns{https://www.w3.org/1999/xhtml/#}
 
 def Main
   html html*
-  xml childz (--
-    - <@*
-      html head*
-      xml childz (--
-        (xml simple
-          html title*
-          :{Lorem ipsum}
-        )
-        - <@*
-          html meta*
-          ...
-      )
-  )
+  xml>
+    attrz --
+    childz (--
+      - <@*
+        html head*
+        xml>
+          attrz --
+          childz (--
+            (xml simple
+              html title*
+              :{Lorem ipsum}
+            )
+            - <@*
+              html meta*
+              xml>
+                attrz <-- <html charset :{utf-8}
+                childz --
+            - <@*
+              html meta*
+              xml>
+                attrz (--
+                  html>
+                    name :description
+                    content :{Lorem ipsum dolor sit amet.}
+                )
+                childz --
+            - <@*
+              html meta*
+              xml>
+                attrz (--
+                  html>
+                    name :author
+                    content :{Te Standby}
+                )
+                childz --
+          )
+      - <@*
+        html body*
+        xml>
+          attrz --
+          childz <--
+            (xml simple
+              html h1
+              :{Consetetur sadipscing elitr}
+            )
+    )
