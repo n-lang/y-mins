@@ -1,4 +1,4 @@
-{% extends "//../.original/project/why-how-what.md" %}
+{% extends "../.original/project/why-how-what.md" %}
 
 
 {% block intro %}
