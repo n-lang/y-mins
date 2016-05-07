@@ -7,7 +7,7 @@ This is the page where we tell the world about the N Language. Get prepared; a ~
 
 ## Who?
 
-- **`probit Labs`** ([@probitlabs](//github.com/probitlabs)), the intiator of the whole thing, is based in **Vienna**, Austria, currently studing at [**Popperschule**](https://www.popperschule.at/), hanging out at [**Metalab** hackerspace](https://metalab.at/) and working on **Semantic Web projects** at [**University** Vienna](http://www.univie.ac.at/).
+- **`probit Labs`** ([@probitlabs](//github.com/probitlabs)), the intiator of the whole thing, is based in **Vienna**, Austria, currently studying at [**Popperschule**](https://www.popperschule.at/), hanging out at [**Metalab** hackerspace](https://metalab.at/) and working on **Semantic Web projects** at [**University** Vienna](http://www.univie.ac.at/).
 
 We welcome anyone who wants to help us do good. But at the moment, we are at a very early stage of the development so that there aren't any language design drafts or contributor guides at the moment. However, [`gram.js`](//github.com/n-lang/n.js/blob/master/src/gram.js) is a good starting point as it includes ~~formal syntax specifications written using EcmaScript's template strings~~ *nothing interesting at the moment :smile:*.
 
