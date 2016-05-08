@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Cormorant';
+  src: url('https://github.com/CatharsisFonts/Cormorant/blob/master/3.%20Webfont%20Files/Cormorant-Book.woff2?raw=true') format('woff2'),
+       url('https://github.com/CatharsisFonts/Cormorant/blob/master/3.%20Webfont%20Files/Cormorant-Book.woff?raw=true') format('woff');
+}
+
+body {
+  font-family: "Cormorant", sans-serif;
+}
