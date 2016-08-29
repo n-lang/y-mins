@@ -1,9 +1,0 @@
-@font-face {
-  font-family: 'Cormorant Book';
-  src: url('./Cormorant-Book.woff2') format('woff2'),
-       url('./Cormorant-Book.woff') format('woff');
-}
-
-body {
-  font-family: 'Cormorant Book', sans-serif;
-}
