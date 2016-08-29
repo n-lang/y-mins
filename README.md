@@ -33,9 +33,7 @@ Jeah, looks kinda ~~cool~~ *empty*.
 
 
 
-{% block when %}
 ## When?
 These are the things to get done in order to get N working:
 
 + [ ] Write this list about the things to do :smile:
-{% endblock %}
