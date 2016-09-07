@@ -23,6 +23,15 @@ We want to create a language in which you **tell what** you think and what you w
 ## How?
 We make extensive use of **graph-based** knowledge representation and **functional** problem descriptions.
 
+EcmaScript | N | Description
+ --- | --- | ---
+ |
+ | | ***Literals***
+`""` | `=q'normalString`
+`"$þ€¢íæł cħ@r $ŧrìng"` | `=q'{$þ€¢íæł cħ@r $ŧrìng}`
+*No distinction between chars and strings* | `'a` | Char
+ |
+
 
 
 ## What?

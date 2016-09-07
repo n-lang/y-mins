@@ -1,0 +1,5 @@
+calc \w \h <~(w / (h / 100) ** 2)
+bmi>
+    'weight e <range 35 150 1
+    'height e <range 125 250 1
+    'index <calc bmi'weight bmi'height
