@@ -49,7 +49,7 @@ EcmaScript | N | Description
 `obj["$þ€¢íæł cħ@r þrøþ"]` | `obj'{$þ€¢íæł cħ@r þrøþ}`
  |
  | | ***Functions***
-x=> y=> x y | `*x*y[x y]`
+`x=> y=> x y` | `*x*y[x y]`
 
 
 
