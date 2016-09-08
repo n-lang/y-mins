@@ -29,9 +29,9 @@ We make extensive use of **graph-based** knowledge representation and **function
 In this repo you will find:
 
 - Design documents
-    + [Syntax](syntax.md)
+    + [Syntax](/doc/syntax.md)
 - Tutorials
-    + [N for EcmaScriptkiddies](ecma.md)
+    + [N for EcmaScriptkiddies](/doc/ecma.md)
 - Code sample snippets
 
 However, at the moment, there is no way to parse or interprete.
