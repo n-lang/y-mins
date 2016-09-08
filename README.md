@@ -30,9 +30,8 @@ EcmaScript | N | Description
 `""` | `=_'string`
 `"$þ€¢íæł cħ@r $ŧrìng"` | `=_'{$þ€¢íæł cħ@r $ŧrìng}`
 *No distinction between chars and strings* | `'a` | Char
- |
-`[BACKTICK]Hello, ${name}[/BACKTICK]` | `'{Hello, } name`
-`parser[BACKTICK]Hello, name[/BACKTICK]` |
+`[BACKTICK]Hello, ${name}[/BACKTICK]` | `=_ '{Hello, } name` | Template
+`parser[BACKTICK]Hello, ${person}[/BACKTICK]` | `parser '{Hello, } person` | Parser
  |
 `0xabc.123` | `=f'abc.123` | Hexadecimal
 `123.456` | `=9'123.456` | Decimal
@@ -42,7 +41,7 @@ EcmaScript | N | Description
 `true` | `++`
 `false` | `--`
  |
-`[a, b]` | `- a b`
+`[a, b]` | `- a b` | List
  |
  | | ***Objects***
 `obj.prop` | `obj'prop`
@@ -50,6 +49,27 @@ EcmaScript | N | Description
  |
  | | ***Functions***
 `x=> y=> x y` | `*x*y[x y]`
+
+### Multi-Lines
+```n
+name>
+    Alicia  love <
+            name 'Hans
+            name 'Martin
+    Anton>
+        love <name 'Herbert
+        shoppingList <-
+            <title 'Vegetables
+            <
+                title 'Oranges
+                count =9'2
+###
+name Alicia love [name 'Hans]
+name Alicia love [name 'Martin]
+name Anton love [name 'Herbert]
+name Anton shoppingList [- [title 'Vegetables] [title 'Oranges]]
+name Anton shoppingList [- [title 'Vegetables] [count =9'2]]
+```
 
 
 
