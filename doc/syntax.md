@@ -1,6 +1,15 @@
 # Syntax
 
-### Multi-Lines
+## Hello World
+```n
+#!$n n:4
+'str n:string
+
+this <
+    title '{Hello, world!}
+```
+
+## Multi-Lines
 ```n
 name>
     Alicia  love <
