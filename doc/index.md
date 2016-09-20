@@ -30,9 +30,10 @@ In this repo you will find:
 
 - Design documents
     + [Syntax](/doc/syntax.md)
+    + [Operators](/doc/operators.md)
 - Tutorials
-    + [N for EcmaScriptkiddies](/doc/ecma.md)
-- Code sample snippets
+    + [N for EcmaScriptKiddies](/doc/ecma.md)
+- Code sample snippets *(comming soon)*
 
 However, at the moment, there is no way to parse or interprete.
 
