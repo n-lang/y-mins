@@ -1,39 +1,43 @@
 # Operators
 
 Operator | Type | Meaning | Example
- --- | ---
+ --- |
  |
 **Highchars** |
 `[BACKTICK]` |
-`*` | `{Builtin}`
-`"` |
-`'` | `{Builtin}`
+`"` | `{Builtin}` | Declaration
+`'` | `{Builtin}` | Literal
+`*` |
  |
 **Lowchars** |
-`.` |
-`,` | `{Builtin}`
- |
-**Whitechars** |
-`:` |
-`;` |
+`,` | `{Builtin}` | Right-Precendence
+`;` | `{Builtin}` | Down-Precedence
+`:` | | List
+`_` |
  |
 **Mathchars** |
-`=` |
-`+` |
+`.` | | Multiplication
+`=` | | Equal
+`+` | | Addition
+`-` | | Subtraction
 `~` |
+ |
+**Logicchars** |
 `!` |
 `?` |
-`@` |
-`#` |
-`$` |
-`%` |
-`^` |
+`^` | | Abstraction
 `&` |
+ |
+**Brackets** |
 `(` `)` |
-`[` `]` | `{Builtin}`
-`{` `}` | `{Builtin}`
+`[` `]` | `{Builtin}` | Precedence
+`{` `}` | `{Builtin}` | Data
 `<` `>` |
 `/` `\` |
 `[PIPE]` |
-`-` |
-`_` |
+ |
+**Blackchars** |
+`@` |
+`#` | `{Builtin}` | Comment
+`$` |
+`%` |
