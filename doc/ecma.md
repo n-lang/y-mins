@@ -6,10 +6,8 @@ EcmaScript | N | Meaning | Description
  --- |
  |
  | | ***Literals***
-`""` | `=_'string`
-`"$þ€¢íæł cħ@r $ŧrìng"` | `=x'{$þ€¢íæł cħ@r $ŧrìng}`
-*No distinction between chars and strings* | `'a` | Char
-`[BACKTICK]Hello, ${name}[/BACKTICK]` | `=x '{Hello, } name` | Template
+`"string"` | `{string}`
+`[BACKTICK]Hello, ${name}[/BACKTICK]` | `=x '{Hello, [person]}` | Template
 `parser[BACKTICK]Hello, ${person}[/BACKTICK]` | `parser, : '{Hello, } person` | Parser
  |
 `0xabc.123` | `=f'abc.123` | Hexadecimal

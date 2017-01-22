@@ -29,8 +29,8 @@ Operator | Type | Meaning | Example
 `&` |
  |
 **Brackets** |
-`(` `)` |
-`[` `]` | `{Builtin}` | Precedence
+`(` `)` | `{Builtin}` | Meta-Expression
+`[` `]` | `{Builtin}` | Expression
 `{` `}` | `{Builtin}` | Data
 `<` `>` |
 `/` `\` |
