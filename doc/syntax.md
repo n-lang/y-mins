@@ -19,9 +19,7 @@ has-sister
     called
         {Magrit}
         {Ma[char xi]}
-has-brother
-    called
-        {Bernhard}
+has-brother [called {Bernhard}]
 ```
 
 
