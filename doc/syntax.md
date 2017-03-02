@@ -9,10 +9,10 @@ N's shebang is `#!$n -n(version)`.
 
 The first version will be 4.00 because it's based on the works on W3C's *RDF/N3*. You usally don't want to specify the minor version , so you'll just write `#!$n -n4`; except you depend on an addition made in a minor version; then you would *shebang* `#!$n -n4.25`.
 
-##### Identifier:
-… identifies one (or more; see semantics) objects in global space.
+##### Identifiers:
+… are case-sensitive and identify one (or more; see semantics) objects in global space.
 
-When identifiers include "special" chars like whitespace you write: `({spezielle spätzle})` (but unicode *is* supported, so you do *not* need to write: `({spezialspätzle})`, just `spezialspätzle` is fine)
+When identifiers include "special" chars like whitespace you write: `({spezielle spätzle})`. But unicode *is* supported, so you do *not* need to write: `({spezialspätzle})`, just `spezialspätzle` is fine.
 
 
 ##### Example:
@@ -80,7 +80,9 @@ has-brother [called {Bernhard}]
 ```
 
 
-## List `:|`
+## Pseudo-literals `:|`
+### Lists
+##### Example:
 ```n
 : /0 |9'1 |9'2
 
@@ -92,7 +94,20 @@ has-brother [called {Bernhard}]
     9'2
 ```
 
-## Polymorphism {`8>`}}
+### Numbers
+Numbers are keys of their highest digit (i.e. base minus 1). When the highest digit is 10 or more, the corresponding uppercase letter is used.
+
+##### Example:
+```n
+1'10010 (_{Binary})
+8'22 (_{Octal})
+9'18 (_{Decimal})
+F'12 (_{Hexadecimal})
+V'I (_{Base32})
+```
+
+## Polymorphism {`8>`}
+##### Example:
 ```n
 has-sister
     /called
