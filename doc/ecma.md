@@ -1,29 +1,28 @@
-# N for EcmaScriptKiddies
+# EcmaScipt → N
 
 ## Syntax
 
-EcmaScript | N | Meaning | Description
- --- |
- |
- | | ***Literals***
-`"string"` | `{string}`
-`[BACKTICK]Hello, ${name}[/BACKTICK]` | `{Hello, [person]}'x` | Template
-`parser[BACKTICK]Hello, ${person}[/BACKTICK]` | `parser{Hello, [person]}` | Parser
- |
-`b32("ldg.lv")` *using a lib* | `{1dg.lv}'v` | Base 32
-`0xabc.123` | `{abc.123}'f` | Hexadecimal
-`123.456` | `{123.456}'9` | Decimal
-`0o707.123` | `{707.123}'7` | Octal
-`0b101` | `{101}'1` | Binary
- |
-`true` | `++` | Boolean
-`false` | `--`
- |
-`[a, b]` | `: /a |b` | List
- |
- | | ***Objects***
-`obj.prop` | `obj'prop`
-`obj["$þ€¢íæł cħ@r þrøþ"]` | `obj'({$þ€¢íæł cħ@r þrøþ})`
- |
- | | ***Declarations***
-`x=> x(y)` | `"x ^[x y]` | Lambda | Abstraction over `x`
+| EcmaScript				| N				| Meaning | Description |
+| ---:					| :---				| :--- | :--- |
+|					|
+|					|				| ***Literal***
+| `"string"`				| `:<<Hey!>>` or `:«Hey!»`	| String
+| `[BTICK]Hello, ${name}[/BTICK]`	| `:«Hello, [person]»`		| Template
+| `parse[BTICK]Hello, ${person}[/BTICK]`| `parse:«Hello, [person]»`	| Parser
+| *---*					|
+| `0b101`				| `0b:101`			| **B**inary
+| `0o707.123`				| `0o:707.123`			| **O**ctal
+| `123.456`				| `0c:123.456`			| De**c**imal
+| `0xabc.123`				| `0x:abc.123`			| He**x**adecimal
+| *---*					|
+| `true`				| `1`				| Boolean Truth
+| `false`				| `0`				| Boolean Falsity
+| *---*					|
+| `[a, b]`				| `[a b]`			| Array → Vector
+| *---*					|
+| 					|				| ***Object***
+| `obj.prop`				| `obj.prop`			| Access
+| `obj["$þ€¢íæł cħ@rs"]`		| `obj.«$þ€¢íæł cħ@rs»`
+| *---* 				|
+|					|				| ***Declaration***
+| `x=> x(y)`				| `"x ^ x y`			| Lambda | Abstraction over `x`
