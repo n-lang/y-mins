@@ -1,0 +1,24 @@
+name %
+    [first-name %Franz]
+    Fridolin
+    [last-name %Freudenhäusl]
+gender 1'1
+accost 1'-1 (_ %Anredeformel: Per Sie (distanziert))
+post head {_ %Posten: Leiter}
+subordinate {_ %Unterstellte:}
+    []
+        name /first-name%Johannes |last-name%Mannes
+        gender 1'1
+        accost 0 (_ %Andredeformel: Per Du (normal))
+        post programmer
+        salary
+            9'1_000 \+ 9'50\*/9'30\-/9'2
+    []
+        name %
+            [first-name Nadine]
+            Anna
+            %(char'Xi)%inder
+            [last-name Namensgewalt]
+        gender 1'-1
+        accost 1'1 (_ %Andredeformel: Per Du (salop))
+    []
